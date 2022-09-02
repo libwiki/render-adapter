@@ -1,4 +1,4 @@
-import {IAdapter} from "./IAdapter";
+import {IAdapter, RenderAttribute} from "./IAdapter";
 
 
 export interface Option {
@@ -6,15 +6,23 @@ export interface Option {
 }
 
 
-export interface IRender extends IAdapter {
+export interface IRender extends RenderAttribute {
 
-    registerAdapter(name: string, adapter: IAdapter)
+    // 注册适配器
+    registerAdapter(adapter: IAdapter)
 
-    init(name: string, option: Option): IAdapter
+    // 开始渲染
+    render(name: string, option: Option): Promise<boolean>
 
-    switchAdapter(name: string, option?: Option): IAdapter
+    // 释放
+    release(): Promise<boolean>
 
+    // 切换适配器并渲染
+    switchAdapter(name: string, option?: Option): Promise<boolean>
+
+    // 获取当前使用的适配器
     getCurrentAdapter(): IAdapter
 
-    release()
+    // 当前版本id
+    getVersion(): string
 }

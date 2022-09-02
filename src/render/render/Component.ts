@@ -1,9 +1,9 @@
-import {IRender} from "../interfaces/IRender";
+import {IAdapter} from "../interfaces/IAdapter";
 
 export class Component {
-    _render: IRender
+    _adapter: IAdapter
 
-    constructor(render: IRender) {
-        this._render = render
+    constructor(adapter: IAdapter) {
+        this._adapter = adapter
     }
 }

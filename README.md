@@ -1,6 +1,6 @@
 # 说明
 
-* 1、初始化
+* [1、渲染器（Render）](src/render/Render.ts)
     * 初始化（init）
     * 释放清理（release）
     * 切换渲染图（switchRender）
@@ -32,15 +32,16 @@
     * 位置移动
     * 事件监听
     * 弹出窗口（Popup）
-* 7、编绘工具（GeometryEditor）
+* [7、工具（Tools）](src/render/interfaces/ITools.ts)
     * 点、线、面
         * 绘制、取点、清除
         * 测距
 * 9、天气组件（Weather）
-* 10、数据可视化图表（DataView）
+* [10、数据可视化图表（DataView）](src/render/interfaces/IDataView.ts)
     * 热力图2d平面,3d柱体（HeatMap）
         * 增删改查
     * 弧线图、战略迁移图（StrategyMap）
         * 增删改查
     * 辐射圈（RadiationPoint）
         * 增删改查
+    
