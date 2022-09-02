@@ -18,6 +18,8 @@ export interface RenderAttribute {
     getAdapterName(): string
 
     getAdapterVersion(): string
+
+    getOriginalRender(): any // 获取当前渲染图原始实例
 }
 
 export interface IAdapter extends RenderAttribute {

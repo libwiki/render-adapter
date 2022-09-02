@@ -1,14 +1,16 @@
 # 说明
 
 * [1、渲染器（Render）](src/render/Render.ts)
-    * 初始化（init）
+    * 获取渲染器版本号（getVersion）
+    * 获取当前使用的适配器（getCurrentAdapter）
+    * 获取当前使用的适配器名称（getAdapterName）
+    * 获取当前使用的适配器版本号（getAdapterVersion）
+    * 注册适配器（registerAdapter）
+    * 开始渲染（render）
     * 释放清理（release）
-    * 切换渲染图（switchRender）
+    * 切换渲染图（switchAdapter）
     * 公共事件(events)
-    * 渲染图类型（getRenderType）
-    * 渲染图版本号（getRenderVersion）
-    * 适配器版本号（getVersion）
-    * 渲染图原始实例（getRender）
+    * 获取当前渲染图原始实例（getOriginalRender）
 * [2、坐标自动适配转换器（Coordinate）](src/render/interfaces/ICoordinate.ts)
     * 转入
     * 转出
@@ -17,6 +19,7 @@
     * 位置设置
     * 角度设置
     * 缩放设置
+    * 运行路径动画相关
     * 事件监听
 * [4、路径（Path）](src/render/interfaces/IPath.ts)
     * 增删改查

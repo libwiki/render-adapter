@@ -22,11 +22,8 @@ export interface Vector3 extends Vector2 {
 
 // 坐标处理对象
 export interface ICoordinate {
-    input<T extends Vector2 | Vector3>(coordinate: T, type: CoordinateTypes): T
+    input<T extends Vector2 | Vector3>(coordinate: T | T[], type: CoordinateTypes): T | T[]
 
-    input<T extends Vector2 | Vector3>(coordinate: T[], type: CoordinateTypes): T[]
+    output<T extends Vector2 | Vector3>(coordinate: T | T[], type: CoordinateTypes): T | T[]
 
-    output<T extends Vector2 | Vector3>(coordinate: T, type: CoordinateTypes): T
-
-    output<T extends Vector2 | Vector3>(coordinate: T[], type: CoordinateTypes): T[]
 }

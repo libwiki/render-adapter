@@ -63,7 +63,7 @@ export class Render implements IRender {
         return true;
     }
 
-    // 释放
+    // 释放清理
     async release(): Promise<boolean> {
         return this._currentAdapter.release();
     }
@@ -92,6 +92,11 @@ export class Render implements IRender {
             this._currentAdapter = oldAdapter
             throw e;
         }
+    }
+
+    // 获取当前渲染图原始实例
+    getOriginalRender(): any {
+        return this._currentAdapter.getOriginalRender();
     }
 
 }
