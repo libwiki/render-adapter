@@ -33,35 +33,27 @@ export enum PolylineEvents {
 
 // 路径处理对象
 export interface IPath {
-    get(id: string): Polyline
 
-    get(ids: string[]): Polyline[]
+    get(id: string | string[]): Polyline | Polyline[]
 
-    create(polyline: Polyline): boolean
+    create(polyline: Polyline | Polyline[]): boolean
 
-    create(polyline: Polyline[]): boolean
 
-    update(polyline: Polyline): boolean
-
-    update(polyline: Polyline[]): boolean
+    update(polyline: Polyline | Polyline[]): boolean
 
     updateStyle(id: string, style: PolylineStyle): boolean
 
-    delete(id: string): boolean
 
-    delete(ids: string[]): boolean
+    delete(id: string | string[]): boolean
 
     clear(): boolean
 
     focus(): boolean
 
-    show(id: string): boolean
+    show(id: string | string[]): boolean
 
-    show(ids: string[]): boolean
 
-    hide(id: string): boolean
-
-    hide(ids: string[]): boolean
+    hide(id: string | string[]): boolean
 
     showAll(): boolean
 

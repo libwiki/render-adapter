@@ -43,36 +43,27 @@ export enum PolygonEvents {
 }
 
 // 图形绘制处理对象
-export interface IShare {
-    get<T extends Polygon | Circle>(id: string): T
+export interface IShape {
+    get<T extends Polygon | Circle>(id: string | string[]): T | T[]
 
-    get<T extends Polygon | Circle>(ids: string[]): T[]
+    create<T extends Polygon | Circle>(polygon: T | T[]): boolean
 
-    create<T extends Polygon | Circle>(polygon: T): boolean
-
-    create<T extends Polygon | Circle>(polygon: T[]): boolean
-
-    update<T extends Polygon | Circle>(polygon: T): boolean
-
-    update<T extends Polygon | Circle>(polygon: T[]): boolean
+    update<T extends Polygon | Circle>(polygon: T | T[]): boolean
 
     updateStyle(id: string, style: PolygonStyle): boolean
 
-    delete(id: string): boolean
+    delete(id: string | string[]): boolean
 
-    delete(ids: string[]): boolean
 
     clear(): boolean
 
     focus(): boolean
 
-    show(id: string): boolean
+    show(id: string | string[]): boolean
 
-    show(ids: string[]): boolean
 
-    hide(id: string): boolean
+    hide(id: string | string[]): boolean
 
-    hide(ids: string[]): boolean
 
     showAll(): boolean
 

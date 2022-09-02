@@ -20,33 +20,22 @@ export interface Point extends Vector3 {
 }
 
 export interface IMarker {
-    get(id: string): Point
 
-    get(ids: string[]): Point[]
+    get(id: string | string[]): Point | Point[]
 
-    create(overlay: Point): boolean
+    create(overlay: Point | Point[]): boolean
 
-    create(overlay: Point[]): boolean
+    update(overlay: Point | Point[]): boolean
 
-    update(overlay: Point): boolean
-
-    update(overlay: Point[]): boolean
-
-    delete(id: string): boolean
-
-    delete(ids: string[]): boolean
+    delete(id: string | string[]): boolean
 
     clear(): boolean
 
     focus(): boolean
 
-    show(id: string): boolean
+    show(id: string | string[]): boolean
 
-    show(ids: string[]): boolean
-
-    hide(id: string): boolean
-
-    hide(ids: string[]): boolean
+    hide(id: string | string[]): boolean
 
     showAll(): boolean
 
