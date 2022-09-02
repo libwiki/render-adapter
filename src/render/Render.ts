@@ -6,6 +6,11 @@ import {IPath} from "./interfaces/IPath";
 import {IShape} from "./interfaces/IShape";
 import {ITools} from "./interfaces/ITools";
 import {IAdapter} from "./interfaces/IAdapter";
+import {Camera} from "./render/Camera";
+import {DataView} from "./render/DataView";
+import {Path} from "./render/Path";
+import {Shape} from "./render/Shape";
+import {Tools} from "./render/Tools";
 
 
 // 渲染器
@@ -24,7 +29,17 @@ export class Render implements IRender {
     constructor(adapter: IAdapter) {
         this.registerAdapter(adapter)
         this._currentAdapter = adapter;
+        this.initComponent();
 
+    }
+
+    // 注册组件
+    initComponent() {
+        this.camera = new Camera(this._currentAdapter)
+        this.dataView = new DataView(this._currentAdapter)
+        this.path = new Path(this._currentAdapter)
+        this.shape = new Shape(this._currentAdapter)
+        this.tools = new Tools(this._currentAdapter)
     }
 
     // 获取渲染器版本号
@@ -86,6 +101,7 @@ export class Render implements IRender {
             if (!renderRes) {
                 throw new Error(`渲染器【${adapter.getAdapterName()}】渲染失败`)
             }
+            this.initComponent(); // 重新注册组件
             return true;
         } catch (e) {
             console.log(e)
