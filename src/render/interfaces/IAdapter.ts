@@ -5,6 +5,7 @@ import {IShape} from "./IShape";
 import {ITools} from "./ITools";
 import {IDataView} from "./IDataView";
 import {Option} from "./IRender";
+import {CoordinateTypes} from "./ICoordinate";
 
 export interface RenderAttribute {
     camera: ICamera
@@ -20,6 +21,7 @@ export interface RenderAttribute {
 }
 
 export interface IAdapter extends RenderAttribute {
+    CoordinateSystem: CoordinateTypes // 使用的坐标系
 
     render(option: Option): Promise<boolean>
 
