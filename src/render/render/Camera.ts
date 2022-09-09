@@ -1,5 +1,5 @@
 import {ICamera} from "../interfaces/ICamera";
-import {Vector3} from "../interfaces/ICoordinate";
+import {Vector3} from "../interfaces/IVector";
 import {Polyline} from "../interfaces/IPath";
 import {Component} from "./Component";
 

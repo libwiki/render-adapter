@@ -1,4 +1,4 @@
-import {Vector2, Vector3} from "./ICoordinate";
+import {Vector2, Vector3} from "./IVector";
 
 // 多边形样式类型
 export enum PolygonStyleTypes {

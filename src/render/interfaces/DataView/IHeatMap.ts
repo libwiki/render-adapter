@@ -1,4 +1,4 @@
-import {Vector2} from "../ICoordinate";
+import {Vector2} from "../IVector";
 
 // 限定区域对象
 export interface Box {

@@ -1,8 +1,9 @@
 import {IAdapter, RenderAttribute} from "./IAdapter";
+import {Vector3} from "./IVector";
 
 
 export interface Option {
-
+    center: Vector3
 }
 
 

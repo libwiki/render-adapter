@@ -1,5 +1,5 @@
 // 辐射圈对象
-import {Vector3} from "../ICoordinate";
+import {Vector3} from "../IVector";
 import {Text} from "../Common";
 
 export interface IRadiationPoint {

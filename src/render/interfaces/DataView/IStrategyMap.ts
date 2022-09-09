@@ -1,4 +1,4 @@
-import {Vector3} from "../ICoordinate";
+import {Vector3} from "../IVector";
 
 
 // 线段类型

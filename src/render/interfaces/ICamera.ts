@@ -1,4 +1,4 @@
-import {Vector3} from "./ICoordinate";
+import {Vector3} from "./IVector";
 import {Polyline} from "./IPath";
 
 // 相机事件

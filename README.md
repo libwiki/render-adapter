@@ -11,7 +11,7 @@
     * 切换渲染图（switchAdapter）
     * 公共事件(events)
     * 获取当前渲染图原始实例（getOriginalRender）
-* [2、坐标自动适配转换器（Coordinate）](src/render/interfaces/ICoordinate.ts)
+* [2、坐标自动适配转换器（Coordinate）](src/render/interfaces/IVector.ts)
     * 转入
     * 转出
 * [3、相机镜头（Camera）](src/render/interfaces/ICamera.ts)
@@ -47,4 +47,3 @@
         * 增删改查
     * 辐射圈（RadiationPoint）
         * 增删改查
-    

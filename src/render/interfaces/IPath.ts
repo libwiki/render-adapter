@@ -1,4 +1,4 @@
-import {Vector3} from "./ICoordinate";
+import {Vector3} from "./IVector";
 
 // 线段样式类型
 export enum PolylineStyleTypes {

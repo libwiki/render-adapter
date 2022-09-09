@@ -21,6 +21,20 @@ function initEcharts() {
     height: 400,
     renderer: 'svg',
   });
+  const data = [
+    {
+      value: 335,
+      name: 'A'
+    },
+    {
+      value: 234,
+      name: 'B'
+    },
+    {
+      value: 1548,
+      name: 'C'
+    }
+  ].reverse();
   // 使用刚指定的配置项和数据显示图表。
   myChart.setOption({
     title: {
@@ -28,23 +42,13 @@ function initEcharts() {
       left: 'center',
       // top: 'center'
     },
+    legend: {
+      bottom: "5%"
+    },
     series: [
       {
         type: 'pie',
-        data: [
-          {
-            value: 335,
-            name: 'A'
-          },
-          {
-            value: 234,
-            name: 'B'
-          },
-          {
-            value: 1548,
-            name: 'C'
-          }
-        ],
+        data,
         avoidLabelOverlap: false,
         label: {
           show: false,
@@ -70,7 +74,6 @@ function initEcharts() {
       }
     ]
   })
-
 
 
 }

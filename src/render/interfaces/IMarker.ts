@@ -1,4 +1,4 @@
-import {Vector3} from "./ICoordinate";
+import {Vector3} from "./IVector";
 import {Image, Offset, Size, Text, TextStyle, VisibleState} from "./Common";
 
 

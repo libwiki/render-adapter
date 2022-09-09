@@ -5,7 +5,7 @@ import {IShape} from "./IShape";
 import {ITools} from "./ITools";
 import {IDataView} from "./IDataView";
 import {Option} from "./IRender";
-import {CoordinateTypes} from "./ICoordinate";
+import {CoordinateTypes} from "./IVector";
 
 export interface RenderAttribute {
     camera: ICamera

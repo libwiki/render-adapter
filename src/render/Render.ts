@@ -69,7 +69,7 @@ export class Render implements IRender {
     }
 
     // 开始渲染
-    async render(option: Option): Promise<boolean> {
+    async render(name: string, option: Option): Promise<boolean> {
         const renderRes = await this._currentAdapter.render(option);
         if (!renderRes) {
             throw new Error("渲染失败")
@@ -97,7 +97,7 @@ export class Render implements IRender {
                 throw new Error(`渲染器【${oldAdapter.getAdapterName()}】释放失败`)
             }
             this._currentAdapter = adapter; // 设置新的渲染器
-            const renderRes = await this.render(option || this._option); // 渲染
+            const renderRes = await this.render(name, option || this._option); // 渲染
             if (!renderRes) {
                 throw new Error(`渲染器【${adapter.getAdapterName()}】渲染失败`)
             }
