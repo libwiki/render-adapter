@@ -3,6 +3,8 @@ import {Vector3} from "./IVector";
 
 
 export interface Option {
+    element: HTMLElement
+    key: string
     center: Vector3
 }
 
